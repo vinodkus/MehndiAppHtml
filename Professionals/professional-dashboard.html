@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Dashboard - MehndiApp</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/prof-dash.css">
+   
+</head>
+<body>
+    <div class="sidebar">
+        <a href="professional-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="prof-Profile.html"><i class="fas fa-user"></i> My Profile</a>
+        <a href="prof-request.html"><i class="fas fa-envelope"></i> Requests</a>
+        <a href="prof-services.html"><i class="fas fa-briefcase"></i> Services</a>
+        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h2>Welcome, [Professional Name]</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">New Requests</h5>
+                        <p class="card-text">You have 5 new requests.</p>
+                        <a href="#" class="btn btn-primary">View Requests</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">My Services</h5>
+                        <p class="card-text">Manage your services.</p>
+                        <a href="#" class="btn btn-primary">Edit Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile Settings</h5>
+                        <p class="card-text">Update your profile information.</p>
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <h5>Recent Activity</h5>
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Request from Jane Smith for Bridal Mehndi on July 25th.</li>
+                            <li class="list-group-item">Request from Maria Garcia for Traditional Mehndi on July 30th.</li>
+                            <li class="list-group-item">Request from Emily Johnson for Arabic Mehndi on August 1st.</li>
+                            <!-- More activity items can be added here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
