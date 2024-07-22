@@ -3,113 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehndi Professionals - MehndiApp</title>
+    <title>Professionals - MehndiApp</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/prof.css">
+    <style>
+       
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Mehndi Professionals</h1>
-        <div class="row">
-            <!-- Professional 1 -->
-            <div class="col-md-4">
-                <div class="card card-professional">
-                    <img src="assets/profilePic/pic1.jpeg" class="card-img-top stamp-pic" alt="Profile Picture 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Jane Doe</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-                        <p class="card-text">
-                            <span class="badge bg-success">4.8</span>
-                            <span>(120 reviews)</span>
-                        </p>
-                        <a href="professional-detail.html" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MehndiApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="professional-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="requests.html">Requests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
             </div>
-            <!-- Professional 2 -->
-            <div class="col-md-4">
-                <div class="card card-professional">
-                    <img src="assets/profilePic/pic1.jpeg" class="card-img-top stamp-pic" alt="Profile Picture 2">
-                    <div class="card-body">
-                        <h5 class="card-title">John Smith</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
-                        <p class="card-text">
-                            <span class="badge bg-success">4.7</span>
-                            <span>(98 reviews)</span>
-                        </p>
-                        <a href="professional-detail.html" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
-            </div>
-                <!-- Professional 3 -->
-                <div class="col-md-4">
-                    <div class="card card-professional">
-                        <img src="assets/profilePic/pic1.jpeg" class="card-img-top stamp-pic" alt="Profile Picture 2">
-                        <div class="card-body">
-                            <h5 class="card-title">John Smith</h5>
-                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
-                            <p class="card-text">
-                                <span class="badge bg-success">4.7</span>
-                                <span>(98 reviews)</span>
-                            </p>
-                            <a href="professional-detail.html" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- Add more professionals as needed -->
         </div>
-        <div class="row">
-            <!-- Professional 1 -->
-            <div class="col-md-4">
-                <div class="card card-professional">
-                    <img src="assets/profilePic/pic1.jpeg" class="card-img-top stamp-pic" alt="Profile Picture 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Jane Doe</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-                        <p class="card-text">
-                            <span class="badge bg-success">4.8</span>
-                            <span>(120 reviews)</span>
-                        </p>
-                        <a href="professional-detail.html" class="btn btn-primary">View Details</a>
-                    </div>
+    </nav>
+    <div class="content">
+        <h2>Professionals</h2>
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <img src="assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 1">
+                <div>
+                    <h5>John Doe</h5>
+                    <p class="text-muted">Bridal & Traditional Mehndi Expert</p>
+                    <p><strong>Location:</strong> 123 Main Street, Anytown</p>
+                    <p><strong>Experience:</strong> 10 years</p>
+                    <a href="professional-detail.html" class="btn btn-primary btn-sm">View Details</a>
                 </div>
             </div>
-            <!-- Professional 2 -->
-            <div class="col-md-4">
-                <div class="card card-professional">
-                    <img src="assets/profilePic/pic1.jpeg" class="card-img-top stamp-pic" alt="Profile Picture 2">
-                    <div class="card-body">
-                        <h5 class="card-title">John Smith</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
-                        <p class="card-text">
-                            <span class="badge bg-success">4.7</span>
-                            <span>(98 reviews)</span>
-                        </p>
-                        <a href="professional-detail.html" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
-            </div>
-                <!-- Professional 3 -->
-                <div class="col-md-4">
-                    <div class="card card-professional">
-                        <img src="assets/profilePic/pic1.jpeg" class="card-img-top stamp-pic" alt="Profile Picture 2">
-                        <div class="card-body">
-                            <h5 class="card-title">John Smith</h5>
-                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
-                            <p class="card-text">
-                                <span class="badge bg-success">4.7</span>
-                                <span>(98 reviews)</span>
-                            </p>
-                            <a href="professional-detail.html" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-            <!-- Add more professionals as needed -->
         </div>
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <img src="assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 2">
+                <div>
+                    <h5>Jane Smith</h5>
+                    <p class="text-muted">Contemporary & Festive Mehndi Artist</p>
+                    <p><strong>Location:</strong> 456 Elm Street, Anycity</p>
+                    <p><strong>Experience:</strong> 8 years</p>
+                    <a href="professional-detail.html" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more professional cards as needed -->
     </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
