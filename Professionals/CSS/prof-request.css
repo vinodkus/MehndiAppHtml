@@ -1,5 +1,15 @@
 body {
     background: #f7f7f7;
+    display: flex;
+}
+.navbar {
+    background-color: #000;
+}
+.navbar-brand {
+    color: #fff;
+}
+.navbar-nav .nav-link {
+    color: #fff;
 }
 .sidebar {
     height: 100vh;
@@ -23,6 +33,7 @@ body {
 .content {
     margin-left: 220px;
     padding: 20px;
+    flex-grow: 1;
 }
 .card {
     border: none;
@@ -37,16 +48,22 @@ body {
 .btn-primary:hover {
     background: #550a8a;
 }
-.request-card {
-    margin-bottom: 20px;
+.btn-secondary {
+    background: #d9534f;
+    border: none;
 }
-.request-card-header {
-    background: #6a11cb;
+.btn-secondary:hover {
+    background: #c9302c;
+}
+.modal-header {
+    background-color: #6a11cb;
     color: white;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
-.request-card-body {
-    padding: 15px;
+.modal-footer .btn-primary {
+    background: #6a11cb;
+    border: none;
+}
+.modal-footer .btn-secondary {
+    background: #d9534f;
+    border: none;
 }

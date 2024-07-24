@@ -8,48 +8,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/prof-request.css">
     <style>
-        
+       
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <a href="professional-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <nav class="sidebar">
+        <a class="navbar-brand" href="#"><i class="fas fa-hand-sparkles"></i> MehndiApp</a>
+        <a href="professional-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="prof-Profile.html"><i class="fas fa-user"></i> My Profile</a>
         <a href="prof-request.html"><i class="fas fa-envelope"></i> Requests</a>
         <a href="prof-services.html"><i class="fas fa-briefcase"></i> Services</a>
         <a href="prof-settings.html"><i class="fas fa-cog"></i> Settings</a>
         <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+    </nav>
     <div class="content">
         <h2>Requests</h2>
-        <div class="request-card">
-            <div class="request-card-header">
-                <h5>Jane Smith</h5>
-            </div>
-            <div class="request-card-body">
-                <p><strong>Service:</strong> Bridal Mehndi</p>
-                <p><strong>Date:</strong> July 25th, 2024</p>
-                <p><strong>Location:</strong> 123 Main Street, Anytown</p>
-                <p><strong>Message:</strong> Looking forward to your beautiful designs for my wedding!</p>
-                <button class="btn btn-primary">Accept</button>
-                <button class="btn btn-secondary">Decline</button>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Request from Jane Doe</h5>
+                <p class="card-text"><strong>Email:</strong> jane.doe@example.com</p>
+                <p class="card-text"><strong>Message:</strong> I would like to book a Mehndi session for my wedding.</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#acceptModal">Accept</button>
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#declineModal">Decline</button>
             </div>
         </div>
-        <div class="request-card">
-            <div class="request-card-header">
-                <h5>Maria Garcia</h5>
-            </div>
-            <div class="request-card-body">
-                <p><strong>Service:</strong> Traditional Mehndi</p>
-                <p><strong>Date:</strong> July 30th, 2024</p>
-                <p><strong>Location:</strong> 456 Elm Street, Sometown</p>
-                <p><strong>Message:</strong> Excited to have your artwork for our family event!</p>
-                <button class="btn btn-primary">Accept</button>
-                <button class="btn btn-secondary">Decline</button>
-            </div>
-        </div>
-        <!-- More request cards can be added here -->
     </div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Accept Modal -->
+    <div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="acceptModalLabel">Accept Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You have accepted the request from Jane Doe. Please confirm the details and arrange a session.</p>
+                    <form id="acceptForm">
+                        <div class="mb-3">
+                            <label for="sessionDate" class="form-label">Session Date</label>
+                            <input type="date" class="form-control" id="sessionDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sessionTime" class="form-label">Session Time</label>
+                            <input type="time" class="form-control" id="sessionTime" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decline Modal -->
+    <div class="modal fade" id="declineModal" tabindex="-1" aria-labelledby="declineModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="declineModalLabel">Decline Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You have declined the request from Jane Doe. Please provide a reason for declining.</p>
+                    <form id="declineForm">
+                        <div class="mb-3">
+                            <label for="declineReason" class="form-label">Reason</label>
+                            <textarea class="form-control" id="declineReason" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
