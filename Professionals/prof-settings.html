@@ -12,7 +12,15 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidebar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <nav class="sidebar" id="sidebar">
         <a class="navbar-brand" href="#"><i class="fas fa-hand-sparkles"></i> MehndiApp</a>
         <a href="professional-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="prof-Profile.html"><i class="fas fa-user"></i> My Profile</a>
@@ -21,7 +29,7 @@
         <a href="prof-settings.html"><i class="fas fa-cog"></i> Settings</a>
         <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
-    <div class="content">
+    <div class="content" id="content">
         <h2>Settings</h2>
         <div class="card">
             <div class="card-header">
@@ -79,5 +87,18 @@
         </div>
     </div>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var content = document.getElementById('content');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-220px';
+                content.style.marginLeft = '0';
+            } else {
+                sidebar.style.left = '0px';
+                content.style.marginLeft = '220px';
+            }
+        }
+    </script>
 </body>
 </html>

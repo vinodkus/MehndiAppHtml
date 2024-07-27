@@ -15,10 +15,11 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -220px; /* Hide sidebar offscreen */
     width: 220px;
     background-color: #343a40;
     padding-top: 20px;
+    transition: left 0.3s;
 }
 .sidebar a {
     color: white;
@@ -31,9 +32,11 @@ body {
     background-color: #495057;
 }
 .content {
-    margin-left: 220px;
+    margin-left: 0;
     padding: 20px;
     flex-grow: 1;
+    width: 100%; /* Take full width */
+    transition: margin-left 0.3s;
 }
 .card {
     border: none;
@@ -66,4 +69,13 @@ body {
 .modal-footer .btn-secondary {
     background: #d9534f;
     border: none;
+}
+@media (min-width: 768px) {
+    .sidebar {
+        left: 0; /* Show sidebar on larger screens */
+    }
+    .content {
+        margin-left: 220px;
+        width: calc(100% - 220px); /* Adjust width for larger screens */
+    }
 }
