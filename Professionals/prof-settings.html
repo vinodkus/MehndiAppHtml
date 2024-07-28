@@ -6,30 +6,64 @@
     <title>Settings - MehndiApp</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/prof-settings.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-       
+        body {
+            background: #f7f7f7;
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background: #6a11cb;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #550a8a;
+        }
+        .card-header {
+            background: #6a11cb;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidebar()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-    <nav class="sidebar" id="sidebar">
+    <div class="sidebar">
         <a class="navbar-brand" href="#"><i class="fas fa-hand-sparkles"></i> MehndiApp</a>
         <a href="professional-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="prof-Profile.html"><i class="fas fa-user"></i> My Profile</a>
         <a href="prof-request.html"><i class="fas fa-envelope"></i> Requests</a>
         <a href="prof-services.html"><i class="fas fa-briefcase"></i> Services</a>
         <a href="prof-settings.html"><i class="fas fa-cog"></i> Settings</a>
-        <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a href="../professional.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
-    <div class="content" id="content">
+    <div class="content">
         <h2>Settings</h2>
         <div class="card">
             <div class="card-header">
@@ -87,18 +121,5 @@
         </div>
     </div>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            var content = document.getElementById('content');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-220px';
-                content.style.marginLeft = '0';
-            } else {
-                sidebar.style.left = '0px';
-                content.style.marginLeft = '220px';
-            }
-        }
-    </script>
 </body>
 </html>

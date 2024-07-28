@@ -1,25 +1,14 @@
 body {
     background: #f7f7f7;
-    display: flex;
-}
-.navbar {
-    background-color: #000;
-}
-.navbar-brand {
-    color: #fff;
-}
-.navbar-nav .nav-link {
-    color: #fff;
 }
 .sidebar {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -220px; /* Hide sidebar offscreen */
+    left: 0;
     width: 220px;
     background-color: #343a40;
     padding-top: 20px;
-    transition: left 0.3s;
 }
 .sidebar a {
     color: white;
@@ -32,11 +21,23 @@ body {
     background-color: #495057;
 }
 .content {
-    margin-left: 0;
+    margin-left: 220px;
     padding: 20px;
-    flex-grow: 1;
-    width: 100%; /* Take full width */
-    transition: margin-left 0.3s;
+}
+.profile-header {
+    background: #6a11cb;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 10px;
 }
 .card {
     border: none;
@@ -50,32 +51,4 @@ body {
 }
 .btn-primary:hover {
     background: #550a8a;
-}
-.btn-secondary {
-    background: #d9534f;
-    border: none;
-}
-.btn-secondary:hover {
-    background: #c9302c;
-}
-.modal-header {
-    background-color: #6a11cb;
-    color: white;
-}
-.modal-footer .btn-primary {
-    background: #6a11cb;
-    border: none;
-}
-.modal-footer .btn-secondary {
-    background: #d9534f;
-    border: none;
-}
-@media (min-width: 768px) {
-    .sidebar {
-        left: 0; /* Show sidebar on larger screens */
-    }
-    .content {
-        margin-left: 220px;
-        width: calc(100% - 220px); /* Adjust width for larger screens */
-    }
 }
