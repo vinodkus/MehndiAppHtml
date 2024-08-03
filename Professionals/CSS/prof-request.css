@@ -1,6 +1,8 @@
 body {
     background: #f7f7f7;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 .navbar {
     background-color: #000;
@@ -15,11 +17,12 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -220px; /* Hide sidebar offscreen */
+    left: 0;
     width: 220px;
     background-color: #343a40;
     padding-top: 20px;
-    transition: left 0.3s;
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 .sidebar a {
     color: white;
@@ -32,11 +35,10 @@ body {
     background-color: #495057;
 }
 .content {
-    margin-left: 0;
+    margin-left: 220px;
     padding: 20px;
     flex-grow: 1;
-    width: 100%; /* Take full width */
-    transition: margin-left 0.3s;
+    transition: margin-left 0.3s ease; 
 }
 .card {
     border: none;
@@ -70,12 +72,34 @@ body {
     background: #d9534f;
     border: none;
 }
-@media (min-width: 768px) {
+.toggle-btn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+@media (max-width: 768px) {
     .sidebar {
-        left: 0; /* Show sidebar on larger screens */
+        transform: translateX(-100%);
     }
     .content {
+        margin-left: 0;
+    }
+    .toggle-btn {
+        display: block;
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    .content.shift {
         margin-left: 220px;
-        width: calc(100% - 220px); /* Adjust width for larger screens */
     }
 }

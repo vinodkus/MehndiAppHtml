@@ -52,3 +52,34 @@ body {
 .btn-primary:hover {
     background: #550a8a;
 }
+.toggle-btn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    .content {
+        margin-left: 0;
+    }
+    .toggle-btn {
+        display: block;
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    .content.shift {
+        margin-left: 220px;
+    }
+}

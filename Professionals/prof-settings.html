@@ -6,54 +6,15 @@
     <title>Settings - MehndiApp</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/prof-settings.css">
     <style>
-        body {
-            background: #f7f7f7;
-        }
-        .sidebar {
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 220px;
-            background-color: #343a40;
-            padding-top: 20px;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            display: block;
-            text-align: center;
-        }
-        .sidebar a:hover {
-            background-color: #495057;
-        }
-        .content {
-            margin-left: 220px;
-            padding: 20px;
-        }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            background: #6a11cb;
-            border: none;
-        }
-        .btn-primary:hover {
-            background: #550a8a;
-        }
-        .card-header {
-            background: #6a11cb;
-            color: white;
-        }
+       
     </style>
 </head>
 <body>
+    <button class="toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
     <div class="sidebar">
         <a class="navbar-brand" href="#"><i class="fas fa-hand-sparkles"></i> MehndiApp</a>
         <a href="professional-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
@@ -120,6 +81,12 @@
             </div>
         </div>
     </div>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>  <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('show');
+            document.querySelector('.content').classList.toggle('shift');
+        }
+    </script>
+
 </body>
 </html>
