@@ -17,6 +17,14 @@ body {
     padding: 1.5rem;
     text-align: center;
 }
+.nav-tabs .nav-link {
+    border-radius: 10px;
+    border: none;
+}
+.nav-tabs .nav-link.active {
+    background: #6a11cb;
+    color: white;
+}
 .form-control, .btn {
     border-radius: 10px;
 }
