@@ -6,9 +6,61 @@
     <title>Professional Details - MehndiApp</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/profdtl.css">
     <style>
-       
+        body {
+            background: #f7f7f7;
+        }
+        .navbar {
+            background-color: #6a11cb;
+        }
+        .navbar-brand {
+            color: #fff;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .content {
+            padding: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background: #6a11cb;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #550a8a;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .card-header {
+            background: #6a11cb;
+            color: white;
+        }
+        .mehndi-samples img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .d-none {
+            display: none;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -48,15 +100,58 @@
                 <p><strong>Location:</strong> 123 Main Street, Anytown</p>
                 <p><strong>Contact:</strong> john.doe@example.com | +123 456 7890</p>
                 <p><strong>About:</strong> John is a highly skilled mehndi artist specializing in intricate bridal designs and traditional patterns. With over 10 years of experience, he has been a part of many memorable events and has a keen eye for detail.</p>
-                <div class="mehndi-samples mb-3">
-                    <h5>Sample Designs:</h5>
-                    <div class="d-flex">
-                        <img src="assets/mehndiSample/m1.jpeg" alt="Mehndi Design 1">
-                        <img src="assets/mehndiSample/m2.jpeg" alt="Mehndi Design 2">
-                        <img src="assets/mehndiSample/m3.jpeg" alt="Mehndi Design 3">
+
+                <!-- Toggle Buttons -->
+                <div class="mb-3">
+                    <button id="carouselViewBtn" class="btn btn-outline-primary">Carousel View</button>
+                    <button id="gridViewBtn" class="btn btn-outline-primary">Grid View</button>
+                </div>
+
+                <!-- Carousel View -->
+                <div id="carouselView" class="d-none">
+                    <div id="mehndiCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/mehndiSample/m1.jpeg" class="d-block w-100" alt="Mehndi Design 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/mehndiSample/m2.jpeg" class="d-block w-100" alt="Mehndi Design 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/mehndiSample/m3.jpeg" class="d-block w-100" alt="Mehndi Design 3">
+                            </div>
+                            <!-- Add more designs as needed -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#mehndiCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#mehndiCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requestModal">Send Request</button>
+
+                <!-- Grid View -->
+                <div id="gridView">
+                    <div class="row row-cols-2 g-2">
+                        <div class="col">
+                            <img src="assets/mehndiSample/m1.jpeg" class="img-fluid rounded" alt="Mehndi Design 1">
+                        </div>
+                        <div class="col">
+                            <img src="assets/mehndiSample/m2.jpeg" class="img-fluid rounded" alt="Mehndi Design 2">
+                        </div>
+                        <div class="col">
+                            <img src="assets/mehndiSample/m3.jpeg" class="img-fluid rounded" alt="Mehndi Design 3">
+                        </div>
+                        <!-- Add more designs as needed -->
+                    </div>
+                </div>
+
+                <!-- Back and Send Request Buttons -->
+                <a href="professionals.html" class="btn btn-secondary mt-3">Back</a>
+                <button class="btn btn-primary mt-3 ms-2" data-bs-toggle="modal" data-bs-target="#requestModal">Send Request</button>
             </div>
         </div>
     </div>
@@ -89,6 +184,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('carouselViewBtn').addEventListener('click', function() {
+            document.getElementById('carouselView').classList.remove('d-none');
+            document.getElementById('gridView').classList.add('d-none');
+        });
+
+        document.getElementById('gridViewBtn').addEventListener('click', function() {
+            document.getElementById('carouselView').classList.add('d-none');
+            document.getElementById('gridView').classList.remove('d-none');
+        });
+    </script>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
